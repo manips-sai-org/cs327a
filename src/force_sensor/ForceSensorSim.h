@@ -3,8 +3,10 @@
 #ifndef FORCE_SENSOR_SIM_H
 #define FORCE_SENSOR_SIM_H
 
-#include "model/ModelInterface.h"
-#include "simulation/Sai2Simulation.h"
+#include "Sai2Model.h"
+#include "Sai2Simulation.h"
+// #include "model/ModelInterface.h"
+// #include "simulation/Sai2Simulation.h"
 #include <Eigen/Dense>
 #include <string>
 #include <vector>
@@ -49,7 +51,8 @@ public:
 		const std::string& link_name,
 		const Eigen::Affine3d& transform_in_link,
 		Simulation::Sai2Simulation* sim,
-		Model::ModelInterface* model)
+		Sai2Model::Sai2Model* model)
+		// Model::ModelInterface* model)
 	: _sim(sim),
 	_model(model)
 	{
@@ -111,7 +114,8 @@ public:
 	Simulation::Sai2Simulation* _sim;
 
 	// handle to model interface
-	Model::ModelInterface* _model;
+	// Model::ModelInterface* _model;
+	Sai2Model::Sai2Model* _model;
 
 	// last updated data
 	ForceSensorData* _data;
