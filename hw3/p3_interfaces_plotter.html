@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Plot and Logger</title>
+
+    <!-- Global and utility stylesheets -->
+    <link rel="stylesheet" href="./css/picnic.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/range_input.css" type="text/css">
+    <link rel="stylesheet" href="./css/global_styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/chosen.min.css" type="text/css">
+
+    <!-- External library includes -->
+    <script src="./js/library/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="./js/library/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="./js/library/plotly.min.js" type="text/javascript"></script>
+    <script src="./js/library/socket.io.js" type="text/javascript"></script>
+
+    <!-- global execution scripts -->
+    <script type="module" src="./js/index.js"></script>
+
+    <!-- Example CSS goes here -->
+    <style>
+      .title {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 0.75fr;
+        grid-template-rows: 80vh auto;
+        grid-gap: 10px;
+      }
+
+      .container-item {
+        border-style: solid;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container-item-content {
+        flex: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Homework 3 Problem 3 Plotting and Logging Interface</h1>
+    </div>
+    
+    <div class="container">
+      <div class="container-item">
+        <h2>Plot</h2>
+        <sai2-interfaces-plot class="container-item-content">
+        </sai2-interfaces-plot>
+      </div>
+      <div class="container-item">
+        <h2>Logger</h2>
+        <sai2-interfaces-logger class="container-item-content"></sai2-interfaces-logger>
+      </div>
+    </div>
+  </body>
+</html>
