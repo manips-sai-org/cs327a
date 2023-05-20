@@ -7,8 +7,10 @@
 #include <string>
 #include <map>
 #include <chai3d.h>
-#include "graphics/ChaiGraphics.h"
-#include "model/ModelInterface.h"
+#include "Sai2Model.h"
+#include "Sai2Graphics.h"
+// #include "graphics/ChaiGraphics.h"
+// #include "model/ModelInterface.h"
 
 #include <Eigen/Core>
 
@@ -145,7 +147,7 @@ public:
 
 	// compute distance to another geometry: sphere
 	// TODO: mark as const once ModelInterface is marked const
-	CapsuleDistanceInfo computeDistanceSphere (const Eigen::Vector3d& center_world, double radius, Model::ModelInterface* robot) {
+	CapsuleDistanceInfo computeDistanceSphere (const Eigen::Vector3d& center_world, double radius, Sai2Model::Sai2Model* robot) {
 		CapsuleDistanceInfo ret_info;
 		std::string closest_link;
 		Eigen::Affine3d link_transform;
